@@ -6,14 +6,30 @@ import tempfile
 
 import PyInstaller.__main__
 
+# create dirs
+VERSION = "1.0.0"
 basePath = os.path.dirname(os.path.abspath(__file__))
+
+
+def copyFile(name: str):
+    shutil.copyfile(
+        os.path.join(basePath, name),
+        os.path.join(distPath, name)
+    )
+
+
+def replaceDir(path):
+    if os.path.exists(path):
+        shutil.rmtree(path)
+
+    os.makedirs(path)
+
+
 distPath = os.path.join(basePath, "dist")
+downloadPath = os.path.join(basePath, "download", VERSION)
 
-# remove dist path
-if os.path.exists(distPath):
-    shutil.rmtree(distPath)
-
-os.mkdir(distPath)
+replaceDir(distPath)
+replaceDir(downloadPath)
 
 # create executable
 args = [
@@ -37,11 +53,9 @@ if sys.platform == 'win32':
 
 PyInstaller.__main__.run(args)
 
-# copy licenses
-shutil.copyfile(
-    os.path.join(basePath, "LICENSE"),
-    os.path.join(distPath, "LICENSE")
-)
+# copy files
+copyFile("LICENSE")
+copyFile("Readme.md")
 
 # create zip
 zipFileBaseName = "TACL-GUI." + platform.system()
@@ -52,9 +66,14 @@ shutil.make_archive(os.path.join(tmpDir, zipFileBaseName), 'zip', distPath)
 
 shutil.copyfile(
     os.path.join(tmpDir, zipFileName),
-    os.path.join(distPath, zipFileName)
+    os.path.join(downloadPath, zipFileName)
 )
 
 shutil.rmtree(tmpDir)
+
+# create symlink
+currentSymLink = os.path.join(basePath, "download", "current")
+os.unlink(currentSymLink)
+os.symlink(downloadPath, currentSymLink)
 
 # Windows command: py -3.9 createExecutable.py
