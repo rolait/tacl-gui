@@ -1,0 +1,11 @@
+.idea
+venv
+*.spec
+dist
+build
+.pytest_cache
+_resources
+htmlcov
+**/tacl-gui.db
+.coverage
+*.pyc

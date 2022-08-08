@@ -1,0 +1,5 @@
+tacl==5.0.3
+pyinstaller==5.0.1
+PyQt5==5.15.6
+pytest==7.1.2
+pandas=1.4.2
