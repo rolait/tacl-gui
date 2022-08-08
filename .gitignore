@@ -1,6 +1,5 @@
 .idea
 venv
-*.spec
 dist
 build
 .pytest_cache
