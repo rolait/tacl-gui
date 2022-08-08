@@ -19,8 +19,8 @@ the necessary version of python)
 - Installing python on your system is not required.
 
 ### Download
-- Windows Version ([Download](download/current/TACL-GUI.Windows.zip))
-- Linux Version ([Download](download/current/TACL-GUI.Linux.zip))
+- Windows Version ([Download](download/1.0.0/TACL-GUI.Windows.zip))
+- Linux Version ([Download](download/1.0.0/TACL-GUI.Linux.zip))
 
 ### Questions & Problems
 If you have any questions or problems, please open a new Issue on this github page. Alternatively, you may also [email us](mailto:michael.radich@hcts.uni-heidelberg.de)
