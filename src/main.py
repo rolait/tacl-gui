@@ -26,7 +26,14 @@ if __name__ == '__main__':
     multiprocessing.freeze_support()
 
     # Determine the base path
-    if getattr(sys, 'frozen', False) and sys.executable:
+
+    if sys.platform == 'darwin':
+        from AppKit import NSSearchPathForDirectoriesInDomains, NSApplicationSupportDirectory, NSUserDomainMask
+        # http://developer.apple.com/DOCUMENTATION/Cocoa/Reference/Foundation/Miscellaneous/Foundation_Functions/Reference/reference.html#//apple_ref/c/func/NSSearchPathForDirectoriesInDomains
+        # Last parameter 'True' for expanding the tilde into a fully qualified path
+        baseDir = os.path.join(NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, True)[0], "TACL")
+        os.makedirs(baseDir, exist_ok=False)
+    elif getattr(sys, 'frozen', False) and sys.executable:
         baseDir = os.path.dirname(sys.executable)
     else:
         baseDir = os.path.dirname(os.path.abspath(__file__))
