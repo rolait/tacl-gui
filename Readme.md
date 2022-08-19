@@ -13,7 +13,7 @@ prefer to have answers can think of it as meaning "Text And Corpus Lab".
 Please consult the TACL GUI Manual (Download link follows) for detailed information.
 
 ### Technical Requirements
-- Currently, the TACL GUI is available both for Windows and Linux (a Mac version will follow soon).
+- The TACL GUI is available both for Windows, Linux, and Mac.
 - Windows users require Windows 10 or higher (earlier versions of Windows are not compatible with
 the necessary version of python)
 - Installing python on your system is not required.
@@ -21,7 +21,8 @@ the necessary version of python)
 ### Download
 - Windows Version ([Download](https://raw.githubusercontent.com/rolait/tacl-gui/main/download/1.0.0/TACL-GUI.Windows.zip))
 - Linux Version ([Download](https://raw.githubusercontent.com/rolait/tacl-gui/main/download/1.0.0/TACL-GUI.Linux.zip))
-
+- Mac Version ([Download](https://www.dropbox.com/s/gmc6uvvtayowbfh/TACL-GUI.Darwin.zip))
+  - **Please note (Concerning the Mac version):** Since the application is self-signed and not notarized, it needs to be launched via right click -> "open", instead of a double click. See also [here](https://support.apple.com/en-gb/guide/mac-help/mh40616/mac).
 ### Questions & Problems
 If you have any questions or problems, please open a new Issue on this github page. Alternatively, you may also [email us](mailto:michael.radich@hcts.uni-heidelberg.de)
 
@@ -33,4 +34,4 @@ The TACL GUI is licensed under the GNU GENERAL PUBLIC LICENSE v3 (see [the Licen
 - [PyQt5](https://www.riverbankcomputing.com/software/pyqt/) - [GNU GPL v3](https://www.riverbankcomputing.com/software/pyqt/)
 - [pytest](https://github.com/pytest-dev/pytest) - [MIT License](https://github.com/pytest-dev/pytest/blob/main/LICENSE)
 - [pandas](https://github.com/pandas-dev/pandas) - [BSD 3-Clause License](https://github.com/pandas-dev/pandas/blob/main/LICENSE)
-
+- [PyObjC](https://github.com/ronaldoussoren/pyobjc/) - [MIT License](https://pypi.org/project/pyobjc/)
