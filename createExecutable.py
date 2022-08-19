@@ -44,6 +44,8 @@ args = [
     '--add-data', 'resources/app-icon-48.png:resources',
     '--add-data', 'resources/app-icon-256.png:resources',
     '--add-data', 'resources/tacl-gui.db.structure.sql:resources',
+    '--osx-entitlements-file', 'resources/entitlements.plist',
+    '--osx-bundle-identifier', 'com.tacl-gui',
     os.path.join('src', 'main.py'),
 ]
 
