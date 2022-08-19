@@ -7,7 +7,6 @@ import tempfile
 import PyInstaller.__main__
 
 # create dirs
-VERSION = "1.0.0"
 basePath = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -26,10 +25,10 @@ def replaceDir(path):
 
 
 distPath = os.path.join(basePath, "dist")
-downloadPath = os.path.join(basePath, "download", VERSION)
+releasePath = os.path.join(basePath, "release")
 
 replaceDir(distPath)
-replaceDir(downloadPath)
+replaceDir(releasePath)
 
 # create executable
 args = [
@@ -68,14 +67,9 @@ shutil.make_archive(os.path.join(tmpDir, zipFileBaseName), 'zip', distPath)
 
 shutil.copyfile(
     os.path.join(tmpDir, zipFileName),
-    os.path.join(downloadPath, zipFileName)
+    os.path.join(releasePath, zipFileName)
 )
 
 shutil.rmtree(tmpDir)
-
-# create symlink
-currentSymLink = os.path.join(basePath, "download", "current")
-os.unlink(currentSymLink)
-os.symlink(downloadPath, currentSymLink)
 
 # Windows command: py -3.9 createExecutable.py
