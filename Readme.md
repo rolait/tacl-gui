@@ -13,7 +13,7 @@ prefer to have answers can think of it as meaning "Text And Corpus Lab".
 Please consult the TACL GUI Manual (Download link follows) for detailed information.
 
 ### Technical Requirements
-- The TACL GUI is available both for Windows, Linux, and Mac.
+- The TACL GUI is available for Windows, Linux, and Mac.
 - Windows users require Windows 10 or higher (earlier versions of Windows are not compatible with
 the necessary version of python)
 - Installing python on your system is not required.
