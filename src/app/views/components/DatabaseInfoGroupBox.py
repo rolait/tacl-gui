@@ -52,7 +52,7 @@ class DatabaseInfoGroupBox(QGroupBox):
 
     def _createValueLabel(self) -> QLabel:
         label = QLabel()
-        label.setStyleSheet("background-color: #ffffff; padding: 5px;")
+        label.setStyleSheet("border: 1.5px solid #D3D3D3; padding: 5px;")
         label.setTextInteractionFlags(Qt.TextSelectableByMouse )
 
         return label
