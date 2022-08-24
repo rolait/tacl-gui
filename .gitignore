@@ -24,3 +24,6 @@ __pycache__/
 
 /env/
 /download/current
+
+# macOS specific files
+.DS_Store
