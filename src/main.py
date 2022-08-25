@@ -28,11 +28,13 @@ if __name__ == '__main__':
     # Determine the base path
 
     if sys.platform == 'darwin':
+        # On macOS: Use "~/Library/Application Support/TACL" instead of the current working directory to comply with macOS Sandbox restrictions
         from AppKit import NSSearchPathForDirectoriesInDomains, NSApplicationSupportDirectory, NSUserDomainMask
         # http://developer.apple.com/DOCUMENTATION/Cocoa/Reference/Foundation/Miscellaneous/Foundation_Functions/Reference/reference.html#//apple_ref/c/func/NSSearchPathForDirectoriesInDomains
         # Last parameter 'True' for expanding the tilde into a fully qualified path
         baseDir = os.path.join(NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, True)[0], "TACL")
-        os.makedirs(baseDir, exist_ok=False)
+        # Create the directory if it does not exist yet
+        os.makedirs(baseDir, exist_ok=True)
     elif getattr(sys, 'frozen', False) and sys.executable:
         baseDir = os.path.dirname(sys.executable)
     else:
