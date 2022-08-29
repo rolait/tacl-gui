@@ -22,7 +22,8 @@ the necessary version of python)
 - Windows Version ([Download](https://github.com/rolait/tacl-gui/releases/download/v1.0.0/TACL-GUI.Windows.zip))
 - Linux Version ([Download](https://github.com/rolait/tacl-gui/releases/download/v1.0.0/TACL-GUI.Linux.zip))
 - Mac Version ([Download](https://github.com/rolait/tacl-gui/releases/download/v1.0.1/TACL-GUI.Darwin.zip))
-  - **Please note (Concerning the Mac version):** Since the application is self-signed and not notarized, it needs to be launched via right click -> "open", instead of a double click. See also [here](https://support.apple.com/en-gb/guide/mac-help/mh40616/mac).
+  - **Please note:** Since the Mac version is self-signed and not notarized, it needs to be launched via right click -> "open", instead of a double click. See also [here](https://support.apple.com/en-gb/guide/mac-help/mh40616/mac).
+  - Special thanks to Merlin Beutlberger ([@RandomByte](https://github.com/RandomByte)) for testing, adapting, and providing the Mac version!
 ### Questions & Problems
 If you have any questions or problems, please open a new Issue on this github page. Alternatively, you may also [email us](mailto:michael.radich@hcts.uni-heidelberg.de)
 
