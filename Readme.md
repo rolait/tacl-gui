@@ -10,7 +10,7 @@ a tool for the computer-assisted analysis of digitised texts in the Chinese Budd
 stands for. Interested users can contact us with suggestions for fun interpretations; users who
 prefer to have answers can think of it as meaning "Text And Corpus Lab".
 
-Please consult the TACL GUI Manual ([Download here](https://github.com/rolait/tacl-gui/releases/download/v1.0.1/TACL.GUI.user.manual.1.0.1.pdf)) and [TACL GUI One-Stop Shop](https://dazangthings.nz/tacl-gui-one-stop-shop/) for detailed information and further resources. 
+Please consult the TACL GUI Manual ([English Version](https://github.com/rolait/tacl-gui/releases/download/v1.0.1/TACL.GUI.user.manual.1.0.1.pdf) or [Chinese Version](https://github.com/rolait/tacl-gui/releases/download/v1.0.1/TACL_GUI_manual_Mandarin_1.1.pdf)) and [TACL GUI One-Stop Shop](https://dazangthings.nz/tacl-gui-one-stop-shop/) for detailed information and further resources. 
 
 ### Technical Requirements
 - The TACL GUI is available for Windows, Linux, and Mac.
